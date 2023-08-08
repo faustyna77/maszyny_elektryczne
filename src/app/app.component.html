@@ -1,0 +1,27 @@
+<nav>
+  <p>Aplikacja do maszyn elektrycznych</p>
+</nav>
+<main>
+  <div class="box">
+    <h4>Maszyny prądu stałego</h4>
+    <label>Moc znamionowa [W]</label>
+    <input #power type="number">
+    <label>napięcie znamionowe</label>
+    <input #voltage type="number">
+    <label>sprawność w procentach</label>
+    <input #skill type="number">
+    <label> Prędkość znamionowa obr/min</label>
+    <input #speed type="number">
+    <label>napięcie wzbudzenia</label>
+    <input #voltagewz type="number">
+    <label>straty mocy w Watach</label>
+    <input #losts type="number" >
+    <button  (click)="znamionowymoment(power.value,speed.value)" (click)="lostfunction(losts.value)" (click)="voltagefunction(voltage.value,voltagewz.value)" (click)="amper(power.value,voltage.value,skill.value)">klik</button>
+    <div class="resulted">
+    <h4> Parametry rozruchowe{{resulttask}} </h4>
+    <p>Moment znamionowy [N*m] : {{resultmoment}}</p>
+    <p>Prąd znamionowy {{amperresult}}</p>
+    <p>napiecie wzbudzenia {{voltagedwaresult}}</p>
+  </div>
+  </div>
+</main>
